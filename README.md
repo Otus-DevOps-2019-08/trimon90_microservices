@@ -70,3 +70,30 @@ docker volume create reddit_db
 ```console
 docker run -d --network=reddit --network-alias=post_db --network-alias=comment_db -v reddit_db:/data/db  mongo:latest
 ```
+
+# HW 14 Docker сети. Docker-compose.
+
+Была освоена работа с сетью, созданы подсети, бридж и развернуты контейнеры в них.
+
+Так же было освоено написание docker-compose. В него были включены инструкции для разворачивания контейнеров со всеми необходимыми серверами и сетевыми настройками.
+Часть переменных была вынесена в переменные окружения в .env (в публичном репозитории доступен только .env.example как пример).
+
+Касательно наименования проекта:
+
+Имя проекта задается ключом -p коммнады docker-compose:
+
+```
+docker-compose up -p my-otus-project
+```
+
+Или переменной окружения COMPOSE_PROJECT_NAME:
+
+```
+export COMPOSE_PROJECT_NAME=my-otus-project
+```
+(или в файле .env)
+
+По заданию со *:
+
+Был создан  docker-compose.override.yml где добавлен проброс volume с кодом и запуск пума в дебаг режиме с 2 воркерами (--debug -w2).
+
