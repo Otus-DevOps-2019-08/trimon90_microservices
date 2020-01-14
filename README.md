@@ -93,7 +93,7 @@ export COMPOSE_PROJECT_NAME=my-otus-project
 ```
 (или в файле .env)
 
-По заданию со *:
+По "заданию со *":
 
 Был создан  docker-compose.override.yml где добавлен проброс volume с кодом и запуск пума в дебаг режиме с 2 воркерами (--debug -w2).
 
