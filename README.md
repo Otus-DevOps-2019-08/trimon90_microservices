@@ -97,3 +97,11 @@ export COMPOSE_PROJECT_NAME=my-otus-project
 
 Был создан  docker-compose.override.yml где добавлен проброс volume с кодом и запуск пума в дебаг режиме с 2 воркерами (--debug -w2).
 
+
+# HW 14  Gitlab CI. Построение процессаа непрерывной поставки.
+
+В качестве задания был развернут gitlab в докере. Были созданы группа homework и проект example в ней. Установлен и подключен gitlab-runner. Написан .gitlab-ci.yml
+
+В качестве доп задания настроен билд докера с приложением reddit.
+
+ 
