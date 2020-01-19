@@ -104,4 +104,10 @@ export COMPOSE_PROJECT_NAME=my-otus-project
 
 В качестве доп задания настроен билд докера с приложением reddit.
 
- 
+# HW 15  Введение в мониторинг.
+
+Была произведена перекомпоновка файлов. Всё что относится к докеру убрано в католог docker.
+
+Был развернут prometheus (monitoring/prometheus/Dockerfile)  и были настроены метрики для сервисов приложения reddit. Всё описано в docker/docker-compose.yml
+
+
