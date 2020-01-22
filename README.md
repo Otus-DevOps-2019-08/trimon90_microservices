@@ -93,7 +93,7 @@ export COMPOSE_PROJECT_NAME=my-otus-project
 ```
 (или в файле .env)
 
-По "заданию со *":
+По "заданию со звездой":
 
 Был создан  docker-compose.override.yml где добавлен проброс volume с кодом и запуск пума в дебаг режиме с 2 воркерами (--debug -w2).
 
@@ -104,4 +104,13 @@ export COMPOSE_PROJECT_NAME=my-otus-project
 
 В качестве доп задания настроен билд докера с приложением reddit.
 
- 
+# HW 15  Введение в мониторинг.
+
+Была произведена перекомпоновка файлов. Всё что относится к докеру убрано в католог docker.
+
+Был развернут prometheus (monitoring/prometheus/Dockerfile)  и были настроены метрики для сервисов приложения reddit. Всё описано в docker/docker-compose.yml
+
+Ссылка на мой docker hub: 
+
+(https://hub.docker.com/repositories/trimon90)
+
