@@ -114,3 +114,10 @@ export COMPOSE_PROJECT_NAME=my-otus-project
 
 (https://hub.docker.com/repositories/trimon90)
 
+# HW 16 monitoring-2
+
+Продолжение освоения мониторинга. Были разделены файлы основного проекта и мониторинга (docker-compose.yml и docker-compose-monitoring.yml). Были добавлены cadvisor, grafana, alertmanager. Настроены графики, добавлены алерты в слак.
+
+Ссылка на мой docker hub:
+
+(https://hub.docker.com/repositories/trimon90)
