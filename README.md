@@ -121,3 +121,20 @@ export COMPOSE_PROJECT_NAME=my-otus-project
 Ссылка на мой docker hub:
 
 (https://hub.docker.com/repositories/trimon90)
+
+# HW 17 logging
+
+Были обновлено приложение до версии с поддержкой логгирования, пересобраны образы контейнеров. 
+Был написан docker/docker-compose-logging.yml для поднятия elasticsearch-kibana-fluetnd-zippkin. Для fluentd написан свой Dockerfile для сборки со своим fluetd.conf (./logging/fluentd) в котором добавлены фильтры для сервисов нашего приложения.
+
+Запустить приложение и сервисы сбора и агрегации логов можно так:
+```
+$USER_NAME=ваш ник в docker hub
+Собрать и запушить в хаб докера сервисов приложения из ./src, например так:
+for i in ui post-py comment; do cd src/$i; bash docker_build.sh; cd -; done
+cd ./logging/fluentd/
+docker build . -t $USER_NAME/fluentd
+cd ./docker
+docker-compose -f docker-compose-logging up -d
+docker-compose up -d
+```
