@@ -138,3 +138,16 @@ cd ./docker
 docker-compose -f docker-compose-logging up -d
 docker-compose up -d
 ```
+
+# HW 18 Введение в kubernetes
+
+Был поднят кластер kubernetes по гайду kubernetes the hardway (https://github.com/kelseyhightower/kubernetes-the-hard-way). Были описаны три ноды worker и три ноды controller. 
+Сгененирированы сертификаты и прокинуты доступы и фаервол. Настроен dns. 
+
+Написаны четыре базовых шаблона для деполя приложения:
+ - comment-deployment.yml
+ - mongo-deployment.yml
+ - post-deployment.yml
+ - ui-deployment.yml
+
+
