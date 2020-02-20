@@ -193,7 +193,7 @@ kubectl describe service ui  -n dev  | grep NodePort
 
 Заходим на сайт и видим вот такое:
 
-![ui_screen](/screen.jpg)
+![ui_screen](/screen.png)
 
 (пост примерный, у вас не будет ни одного в первый запуск)
 
