@@ -150,4 +150,50 @@ docker-compose up -d
  - post-deployment.yml
  - ui-deployment.yml
 
+# HW 19
+
+Был установлен и настроен minikube и kubectl для него. 
+
+Был развернут кластер кубера в gcp (gke).
+
+Были описаны namespace, deployment, service для приложения reddit, лежат в ./kubernetes/reddit
+
+Основные объекты - это ресурсы Deployment.
+
+Для запуска приложения сначала создадим namespace **dev**, а затем применим конфигурацию:
+
+```
+$ kubectl apply -f ./kubernetes/reddit/dev-namespace.yml
+namespace/dev created
+$ kubectl apply -f ./kubernetes/reddit/ -n dev
+deployment.apps/comment created
+service/comment-db created
+service/comment created
+namespace/dev unchanged
+deployment.apps/mongo created
+service/mongodb created
+deployment.apps/post created
+service/post-db created
+service/post created
+deployment.apps/ui created
+service/ui created
+```
+
+Получим айпи нод:
+
+```
+kubectl get nodes -o wide
+```
+
+и порт ui:
+
+```
+kubectl describe service ui  -n dev  | grep NodePort
+```
+
+Заходим на сайт и видим вот такое:
+
+![ui_screen](/screen.jpg)
+
+(пост примерный, у вас не будет ни одного в первый запуск)
 
