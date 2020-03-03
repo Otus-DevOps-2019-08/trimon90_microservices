@@ -1,0 +1,25 @@
+comment:
+  image:
+    repository: trimon90/comment
+    tag: latest
+  service:
+    externalPort: 9292
+
+post:
+  image:
+    repository: trimon90/post
+    tag: latest
+  service:
+    externalPort: 5000
+
+ui:
+  image:
+    repository: trimon90/ui
+    tag: latest
+  service:
+    externalPort: 9292
+
+mongodb:
+  auth:
+    enabled: false
+  usePassword: false

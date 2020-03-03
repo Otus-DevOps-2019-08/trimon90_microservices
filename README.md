@@ -150,7 +150,7 @@ docker-compose up -d
  - post-deployment.yml
  - ui-deployment.yml
 
-# HW 19
+# HW 19 Основные модели безопасности и контроллеры в Kubernetes
 
 Был установлен и настроен minikube и kubectl для него. 
 
@@ -197,3 +197,24 @@ kubectl describe service ui  -n dev  | grep NodePort
 
 (пост примерный, у вас не будет ни одного в первый запуск)
 
+# HW 20 Kubernetes. Networks, storages.
+
+В рамках дз освоена база сетевого взаимодействия в кластере. Были настроены балансировщики: LoadBalancer и Ingress. 
+Так же были разбораны диски и их подключение.
+
+Написаны или изменены следующие манифесты:
+
+- mongo-claim-dynamic.yml
+- mongo-claim.yml
+- mongo-deployment.yml
+- mongo-network-policy.yml
+- mongo-volume.yml
+- storage-fast.yml
+- ui-ingress.yml
+
+# HW 21
+
+Была освоена работа с helm (kubernetes/Charts) написаны чарты для сборки приложения reddit.
+
+Были добавлены .gitlab-ci.yml для сборки путем gitlab ci.
+ 
